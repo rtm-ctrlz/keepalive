@@ -16,7 +16,8 @@
   },
   "archive": {
     "exclude": [
-      "/test"
+      "/test",
+      "/examples"
     ]
   },
   "require": {
@@ -27,8 +28,12 @@
     "phpstan/phpstan": "^0.12.76",
     "squizlabs/php_codesniffer": "^3.5"
   },
+  "suggest": {
+    "ext-openssl": "to run ssl-examples"
+  },
   "scripts": {
     "phpstan": "./vendor/bin/phpstan analyse -c test/phpstan.neon",
-    "phpcs": "./vendor/bin/phpcs --standard=test/phpcs.xml -s -p src"
+    "phpcs": "./vendor/bin/phpcs --standard=test/phpcs.xml -s -p src examples",
+    "phpcbf": "./vendor/bin/phpcbf --standard=test/phpcs.xml -s -p src examples"
   }
 }

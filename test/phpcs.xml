@@ -10,5 +10,12 @@
 
     <config name="ignore_warnings_on_exit" value="1"/>
 
-    <rule ref="PSR12"/>
+    <rule ref="PSR12">
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
+    </rule>
+
+    <!-- ssl_files_and_constants.php is a SSL helper -->
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>examples/ssl/ssl_files_and_constants.php</exclude-pattern>
+    </rule>
 </ruleset>

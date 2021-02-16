@@ -22,9 +22,9 @@ final class Keepalive
     public const TCP_OPTIONS = [
         // https://github.com/torvalds/linux/blob/master/include/uapi/linux/tcp.h
         'Linux'  => [
-            'TCP_KEEPIDLE'  => 4,
-            'TCP_KEEPINTVL' => 5,
-            'TCP_KEEPCNT'   => 6,
+            'TCP_KEEPIDLE'  => 0x4,
+            'TCP_KEEPINTVL' => 0x5,
+            'TCP_KEEPCNT'   => 0x6,
         ],
         // https://github.com/apple/darwin-xnu/blob/master/bsd/netinet/tcp.h
         'Darwin' => [
@@ -65,11 +65,13 @@ final class Keepalive
      *  - probes:   number of "TCP Keep-Alive" packets without an answer ("TCP Keep-Alive ACK")
      *              to consider socket as "broken pipe"
      *              unit: packets
-     *              default for most systems: 9
+     *              default for most systems: 8
      */
-    public static function enable($socket, int $time = 7200, int $interval = 75, int $probes = 9): bool
+    public static function enable($socket, int $time = 7200, int $interval = 75, int $probes = 8): bool
     {
+        // check if we really can do something
         self::checkPHP();
+
         // enabling Keep-Alive for a socket
         if (!socket_set_option($socket, SOL_SOCKET, SO_KEEPALIVE, 1)) {
             throw new RuntimeException('Failed to enable TCP-Keepalive', 1);
