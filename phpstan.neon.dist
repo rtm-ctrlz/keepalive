@@ -3,3 +3,11 @@ parameters:
   paths:
     - ./src
     - ./examples
+  reportUnmatchedIgnoredErrors: false
+  ignoreErrors:
+    # fix for php8
+    - path: src/Keepalive.php
+      message: '/^Parameter #1 \$socket of function socket_set_option expects Socket, resource|Socket given\.$/'
+    # fix for php7
+    - path: src/Keepalive.php
+      message: '/^Parameter \$socket of method .*::(enable|disable)\(\) has invalid typehint type Socket\.$/'

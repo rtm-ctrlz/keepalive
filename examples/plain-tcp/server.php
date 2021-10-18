@@ -25,7 +25,7 @@ if (!$server) {
     while (true) {
         while ($conn = @stream_socket_accept($server, 5)) {
             $socket = socket_import_stream($conn);
-            if (!is_resource($socket)) {
+            if ($socket === false) {
                 throw new RuntimeException('Failed to import socket');
             }
             Keepalive::enable($socket, 2, 1, 2);
