@@ -42,30 +42,25 @@ final class Keepalive
 
     /**
      * Enabling TCP Keep-Alive on a socket and tuning parameters
-     *
-     * @param resource $socket
-     *
-     * @param int      $time
-     * @param int      $interval
-     * @param int      $probes
-     *
-     * @return true
-     * @throws RuntimeException
-     *
      * Parameters
      *  - time:     timeout from last data-packet (ACKs are not data-packets) in socket
      *              when system hits timeout TCP Keep-Alive mechanism starts to work
      *              unit: seconds
      *              default for most systems: 7200
-     *
      *  - interval: timout between sending probes
      *              unit: seconds
      *              default for most systems: 75
-     *
      *  - probes:   number of "TCP Keep-Alive" packets without an answer ("TCP Keep-Alive ACK")
      *              to consider socket as "broken pipe"
      *              unit: packets
      *              default for most systems: 8
+     *
+     * @param resource|\Socket $socket
+     * @param int             $time
+     * @param int             $interval
+     * @param int             $probes
+     * @throws RuntimeException
+     * @return true
      */
     public static function enable($socket, int $time = 7200, int $interval = 75, int $probes = 8): bool
     {
@@ -94,10 +89,7 @@ final class Keepalive
     }
 
     /**
-     * @static
-     *
-     * @param resource $socket
-     *
+     * @param resource|\Socket $socket
      * @return bool
      */
     public static function disable($socket): bool
