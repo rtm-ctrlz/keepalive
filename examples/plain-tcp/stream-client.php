@@ -18,7 +18,7 @@ if ($stream === false) {
 error_log('Connected!');
 
 $socket = socket_import_stream($stream);
-if (!is_resource($socket)) {
+if ($socket === false) {
     throw new RuntimeException('Failed to import socket');
 }
 Keepalive::enable($socket, 2, 1, 2);

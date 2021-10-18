@@ -11,7 +11,7 @@ $port = 9898;
 
 $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 
-if (!is_resource($socket) || !@socket_connect($socket, $host, $port)) {
+if ($socket === false || !@socket_connect($socket, $host, $port)) {
     throw new RuntimeException("Connection to tcp://{$host}:{$port} failed");
 }
 

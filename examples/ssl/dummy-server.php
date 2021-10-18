@@ -7,7 +7,7 @@ require_once __DIR__ . '/ssl_files_and_constants.php';
 $host = '127.0.0.1';
 $port = 9898;
 
-$errno  = null;
+$errno = null;
 $errstr = null;
 
 $server = stream_socket_server(
