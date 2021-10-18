@@ -8,11 +8,11 @@ max_line_length = 120
 tab_width = 4
 trim_trailing_whitespace = true
 ij_continuation_indent_size = 8
-ij_formatter_off_tag = @formatter:off
-ij_formatter_on_tag = @formatter:on
+ij_formatter_off_tag = "@formatter:off"
+ij_formatter_on_tag = "@formatter : on"
 ij_formatter_tags_enabled = true
 ij_smart_tabs = false
-ij_visual_guides = 120,140
+ij_visual_guides = 120, 140
 ij_wrap_on_typing = false
 
 [{phpstan.neon,phpstan.neon.dist}]
@@ -20,13 +20,13 @@ ij_visual_guides = none
 indent_size = 2
 
 [.editorconfig]
-ij_visual_guides = none
-ij_editorconfig_align_group_field_declarations = true
+ij_editorconfig_align_group_field_declarations = false
 ij_editorconfig_space_after_colon = true
 ij_editorconfig_space_after_comma = true
 ij_editorconfig_space_before_colon = true
 ij_editorconfig_space_before_comma = false
 ij_editorconfig_spaces_around_assignment_operators = true
+
 
 [{*.xml,*.xml.dist}]
 ij_visual_guides = none
@@ -276,3 +276,16 @@ ij_json_spaces_within_braces = false
 ij_json_spaces_within_brackets = false
 ij_json_wrap_long_lines = false
 
+[{*.yaml, *.yml}]
+indent_size = 2
+ij_visual_guides = none
+ij_yaml_align_values_properties = do_not_align
+ij_yaml_autoinsert_sequence_marker = true
+ij_yaml_block_mapping_on_new_line = false
+ij_yaml_indent_sequence_value = true
+ij_yaml_keep_indents_on_empty_lines = false
+ij_yaml_keep_line_breaks = true
+ij_yaml_sequence_on_new_line = false
+ij_yaml_space_before_colon = false
+ij_yaml_spaces_within_braces = true
+ij_yaml_spaces_within_brackets = true
