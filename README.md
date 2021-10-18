@@ -1,6 +1,3 @@
-[![phpstan](https://github.com/rtm-ctrlz/keepalive/actions/workflows/php.yml/badge.svg)](https://github.com/rtm-ctrlz/keepalive/actions/workflows/php.yml)
-[![php_codesniffer](https://github.com/rtm-ctrlz/keepalive/actions/workflows/php.yml/badge.svg)](https://github.com/rtm-ctrlz/keepalive/actions/workflows/php.yml)
-
 # Keepalive
 
 This is a helper for setting proper TCP-Keepalive options and values.
