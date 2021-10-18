@@ -3,6 +3,7 @@ parameters:
   paths:
     - ./src
     - ./examples
+  reportUnmatchedIgnoredErrors: false
   ignoreErrors:
     # fix for php8
     - path: src/Keepalive.php
