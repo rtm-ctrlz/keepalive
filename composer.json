@@ -3,7 +3,6 @@
   "description": "TCP-Keepalive fine tuning utility",
   "type": "library",
   "license": "MIT",
-  "version": "dev-latest",
   "authors": [
     {
       "name": "Ilya Urvachev",
