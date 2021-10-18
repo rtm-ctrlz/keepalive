@@ -1,3 +1,6 @@
+[![phpstan](https://github.com/rtm-ctrlz/keepalive/actions/workflows/php.yml/badge.svg)](https://github.com/rtm-ctrlz/keepalive/actions/workflows/php.yml)
+[![php_codesniffer](https://github.com/rtm-ctrlz/keepalive/actions/workflows/php.yml/badge.svg)](https://github.com/rtm-ctrlz/keepalive/actions/workflows/php.yml)
+
 # Keepalive
 
 This is a helper for setting proper TCP-Keepalive options and values.
@@ -133,3 +136,8 @@ Well, Windows should have support for TCP-Keepalive options, but:
 - I didn't look for `TCP_KEEP*` values on Windows
 
 Feel free to make a PR ;)
+
+# Tested with
+
+- [phpstan/phpstan](https://github.com/phpstan/phpstan)
+- [squizlabs/PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
