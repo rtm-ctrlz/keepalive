@@ -14,20 +14,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v2
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
     - name: Run phpstan
       run: composer run-script phpstan
-      
+
     - name: Run phpcs
       run: composer run-script phpstan
