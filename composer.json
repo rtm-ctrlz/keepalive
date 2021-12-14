@@ -1,6 +1,7 @@
 {
   "name": "rtm-ctrlz/keepalive",
   "description": "TCP-Keepalive fine-tuning utility",
+  "version": "0.3.2",
   "type": "library",
   "license": "MIT",
   "homepage": "https://github.com/rtm-ctrlz/keepalive",
