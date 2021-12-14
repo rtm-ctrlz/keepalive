@@ -3,6 +3,10 @@
   "description": "TCP-Keepalive fine tuning utility",
   "type": "library",
   "license": "MIT",
+  "homepage": "https://github.com/rtm-ctrlz/keepalive",
+  "support": {
+    "issues": "https://github.com/rtm-ctrlz/keepalive/issues"
+  },
   "authors": [
     {
       "name": "Ilya Urvachev",
@@ -19,8 +23,8 @@
     "ext-sockets": "*"
   },
   "require-dev": {
-    "phpstan/phpstan": "^0.12.99 || ^1.0.0",
-    "squizlabs/php_codesniffer": "^3.5"
+    "phpstan/phpstan": "^1.2",
+    "squizlabs/php_codesniffer": "^3.6"
   },
   "suggest": {
     "ext-openssl": "to run ssl-examples"
