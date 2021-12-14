@@ -19,7 +19,7 @@
     "ext-sockets": "*"
   },
   "require-dev": {
-    "phpstan/phpstan": "^0.12.99",
+    "phpstan/phpstan": "^0.12.99 || ^1.0.0",
     "squizlabs/php_codesniffer": "^3.5"
   },
   "suggest": {
