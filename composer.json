@@ -24,7 +24,7 @@
   },
   "require-dev": {
     "phpstan/phpstan": "^1.2",
-    "squizlabs/php_codesniffer": "^3.6"
+    "squizlabs/php_codesniffer": "^3.6 || ^4.0"
   },
   "suggest": {
     "ext-openssl": "to run ssl-examples"
